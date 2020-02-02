@@ -76,10 +76,6 @@ func main() {
 	mapValues = make([]int, 0)
 	vsKeys = make([]string, 0)
 	logTime("map lookup and sort vectors", startTime)
-
-	// totalDuration := time.Since(startTime)
-	// fmt.Printf("It took me %10.10f seconds.\n", float64(totalDuration)/float64(time.Second))
-
 }
 
 func getRandomString(length int) string {
