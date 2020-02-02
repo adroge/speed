@@ -14,6 +14,7 @@ were some issues that arose which resulted in some consessions:
 4. there was a noticeable delay between the last log line and the point where the command prompt appeared in some cases
 5. all applications ran as 64-bits
 6. manually optimizing code with known optimization was deliberately avoided
+7. in Java, the random object was created once to make it more similar to other languages
 
 ## Execution Times
 
@@ -82,6 +83,21 @@ populate vectors 5x 7.234 seconds
 float math 20x 65.406 seconds
 populate map 107.923 seconds
 map lookup and sort vectors 113.425 seconds
+PS C:\Users\Adam\Documents\code\speed\cpp> cd ..\java\
+PS C:\Users\Adam\Documents\code\speed\java> javac .\speed\Speed.java
+PS C:\Users\Adam\Documents\code\speed\java> java speed.Speed
+Hello world!
+populate vectors 5x  16.824 seconds
+float math 20x 152.517 seconds
+populate map 178.268 seconds
+map lookup and sort vectors 184.970 seconds
+PS C:\Users\Adam\Documents\code\speed\java> cd ..\python\
+PS C:\Users\Adam\Documents\code\speed\python> python .\speed.py
+Hello world!
+populate vectors 5x 86.8984260559082 seconds
+float math 20x 790.569694519043 seconds
+populate map 1535.5920796394348 seconds
+map lookup and sort vectors 1541.457656621933 seconds
 ```
 
 | language | populate vectors 5x | float math 20x | populate map | map lookup and sort vectors |
@@ -90,3 +106,5 @@ map lookup and sort vectors 113.425 seconds
 | Go | 9.3470027 | 35.6269931 | 54.9254120 | 59.5709886 |
 | C++ | 9.24109 | 48.6685 | 71.9954 | 76.5116 |
 | Node.js | 7.234 | 65.406 | 107.923 | 113.425 |
+| Java | 16.824 | 152.517 | 178.268 | 184.970 |
+| Python | 86.898 | 790.569 | 1535.592 | 1541.457 |
