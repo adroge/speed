@@ -122,6 +122,10 @@ map lookup and sort vectors 1541.457656621933 seconds
 | Java     | 16.824              | 135.693        | 25.751       | 6.702                       |
 | Python   | 86.898              | 703.671        | 745.023      | 5.865                       |
 
-## Performance Graph
+## Detailed Performance Graph
 
-![Performance Graph](graph.png "Performance Graph")
+![Detailed Performance Graph](graph-detail.png "Detailed Performance Graph")
+
+## Overall Performance Graph
+
+![Overall Performance Graph](graph.png "Overall Performance Graph")
