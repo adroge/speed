@@ -100,11 +100,28 @@ populate map 1535.5920796394348 seconds
 map lookup and sort vectors 1541.457656621933 seconds
 ```
 
-| language | populate vectors 5x | float math 20x | populate map | map lookup and sort vectors |
-|---|---|---|---|---|
-| Rust | 5.972 | 31.880 | 43.812 | 46.922 |
-| Go | 9.347 | 35.626 | 54.925 | 59.570 |
-| C++ | 9.241 | 48.668 | 71.995 | 76.511 |
-| Node.js | 7.234 | 65.406 | 107.923 | 113.425 |
-| Java | 16.824 | 152.517 | 178.268 | 184.970 |
-| Python | 86.898 | 790.569 | 1535.592 | 1541.457 |
+## Overall Time
+
+| Language | Populate Vectors 5x | Float Math 20x | Populate Map | Map Lookup and Sort Vectors |
+|----------|---------------------|----------------|--------------|-----------------------------|
+| Rust     | 5.972               | 31.88          | 43.812       | 46.922                      |
+| Go       | 9.347               | 35.626         | 54.925       | 59.57                       |
+| C++      | 9.241               | 48.668         | 71.995       | 76.511                      |
+| Node.js  | 7.234               | 65.406         | 107.923      | 113.425                     |
+| Java     | 16.824              | 152.517        | 178.268      | 184.97                      |
+| Python   | 86.898              | 790.569        | 1535.592     | 1541.457                    |
+
+## Individual Time
+
+| Language | Populate Vectors 5x | Float Math 20x | Populate Map | Map Lookup and Sort Vectors |
+|----------|---------------------|----------------|--------------|-----------------------------|
+| Rust     | 5.972               | 25.908         | 11.932       | 3.11                        |
+| Go       | 9.347               | 26.279         | 19.299       | 4.645                       |
+| C++      | 9.241               | 39.427         | 23.327       | 4.515                       |
+| Node.js  | 7.234               | 58.172         | 42.517       | 5.502                       |
+| Java     | 16.824              | 135.693        | 25.751       | 6.702                       |
+| Python   | 86.898              | 703.671        | 745.023      | 5.865                       |
+
+## Performance Graph
+
+![Performance Graph](graph.png "Performance Graph")
