@@ -83,16 +83,16 @@ populate vectors 5x 7.234 seconds
 float math 20x 65.406 seconds
 populate map 107.923 seconds
 map lookup and sort vectors 113.425 seconds
-PS C:\Users\Adam\Documents\code\speed\cpp> cd ..\java\
-PS C:\Users\Adam\Documents\code\speed\java> javac .\speed\Speed.java
-PS C:\Users\Adam\Documents\code\speed\java> java speed.Speed
+PS C:\Users\User\Documents\code\speed\cpp> cd ..\java\
+PS C:\Users\User\Documents\code\speed\java> javac .\speed\Speed.java
+PS C:\Users\User\Documents\code\speed\java> java speed.Speed
 Hello world!
 populate vectors 5x  16.824 seconds
 float math 20x 152.517 seconds
 populate map 178.268 seconds
 map lookup and sort vectors 184.970 seconds
-PS C:\Users\Adam\Documents\code\speed\java> cd ..\python\
-PS C:\Users\Adam\Documents\code\speed\python> python .\speed.py
+PS C:\Users\User\Documents\code\speed\java> cd ..\python\
+PS C:\Users\User\Documents\code\speed\python> python .\speed.py
 Hello world!
 populate vectors 5x 86.8984260559082 seconds
 float math 20x 790.569694519043 seconds
