@@ -98,6 +98,25 @@ populate vectors 5x 86.8984260559082 seconds
 float math 20x 790.569694519043 seconds
 populate map 1535.5920796394348 seconds
 map lookup and sort vectors 1541.457656621933 seconds
+PS C:\Users\User\Documents\code\speed\python> cd ..\cs
+PS C:\Users\User\Documents\code\speed\cs> dotnet build -c Release
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 15.73 ms for C:\Users\User\Documents\code\speed\cs\cs.csproj.
+  cs -> C:\Users\User\Documents\code\speed\cs\bin\Release\netcoreapp3.1\cs.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.45
+PS C:\Users\User\Documents\code\speed\cs> .\bin\Release\netcoreapp3.1\cs.exe
+Hello World!
+populate vectors 5x 00:00:06.2318781 seconds
+float math 20x 00:00:34.1078037 seconds
+populate map 00:01:21.4682599 seconds
+map lookup and sort vectors 00:01:32.0511950 seconds
 ```
 
 ## Overall Time
@@ -107,6 +126,7 @@ map lookup and sort vectors 1541.457656621933 seconds
 | Rust     | 5.972               | 31.88          | 43.812       | 46.922                      |
 | Go       | 9.347               | 35.626         | 54.925       | 59.57                       |
 | C++      | 9.241               | 48.668         | 71.995       | 76.511                      |
+| C#       | 6.231               | 34.107         | 81.468       | 92.051                      |
 | Node.js  | 7.234               | 65.406         | 107.923      | 113.425                     |
 | Java     | 16.824              | 152.517        | 178.268      | 184.97                      |
 | Python   | 86.898              | 790.569        | 1535.592     | 1541.457                    |
@@ -118,6 +138,7 @@ map lookup and sort vectors 1541.457656621933 seconds
 | Rust     | 5.972               | 25.908         | 11.932       | 3.11                        |
 | Go       | 9.347               | 26.279         | 19.299       | 4.645                       |
 | C++      | 9.241               | 39.427         | 23.327       | 4.515                       |
+| C#       | 6.231               | 27.876         | 47.361       | 10.583                      |
 | Node.js  | 7.234               | 58.172         | 42.517       | 5.502                       |
 | Java     | 16.824              | 135.693        | 25.751       | 6.702                       |
 | Python   | 86.898              | 703.671        | 745.023      | 5.865                       |
