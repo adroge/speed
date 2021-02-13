@@ -6,15 +6,15 @@ most relevant to a server based architecture.
 ## Notes and Observations
 
 A reasonable attempt was made to have each application behave in a similar manner; however, there
-were some issues that arose which resulted in some consessions:
+were some issues that arose which resulted in some differences:
 
-1. the Node.js Map could not be used because it would result in out of memory errors
-2. garbage collection was forced, and in the cases where there was no garbage collector, it was simulated by freeing memory manually
-3. using const increased performance in some cases
-4. there was a noticeable delay between the last log line and the point where the command prompt appeared in some cases
-5. all applications ran as 64-bits
-6. manually optimizing code with known optimization was deliberately avoided
-7. in Java, the random object was created once to make it more similar to other languages
+1. The Node.js Map could not be used due to the memory limitations of Node.js itself - this was not an issue with other languages
+2. Freeing memory is considered part of performance
+3. There was a barely noticeable delay (well under half a second) between the last log line and the point where the command prompt appeared in some cases
+4. All applications ran as 64-bits applications
+5. Manually optimizing code was avoided to demonstrate out of the box performance
+6. In Java, the random object was created once to make it similar to other languages
+7. The tests were written in a way to make cross platform testing easier
 
 ## Execution Times
 
@@ -121,6 +121,8 @@ map lookup and sort vectors 00:01:32.0511950 seconds
 
 ## Overall Time
 
+This is the time it took from beginning to end where each column represents the point in time when the operation finished.
+
 | Language | Populate Vectors 5x | Float Math 20x | Populate Map | Map Lookup and Sort Vectors |
 |----------|---------------------|----------------|--------------|-----------------------------|
 | Rust     | 5.972               | 31.88          | 43.812       | 46.922                      |
@@ -132,6 +134,8 @@ map lookup and sort vectors 00:01:32.0511950 seconds
 | Python   | 86.898              | 790.569        | 1535.592     | 1541.457                    |
 
 ## Individual Time
+
+This is the individual times it took for each test.
 
 | Language | Populate Vectors 5x | Float Math 20x | Populate Map | Map Lookup and Sort Vectors |
 |----------|---------------------|----------------|--------------|-----------------------------|
@@ -145,8 +149,8 @@ map lookup and sort vectors 00:01:32.0511950 seconds
 
 ## Detailed Performance Graph
 
-![Detailed Performance Graph](graph-detail.png "Detailed Performance Graph")
+![Detailed Performance Graph](img/graph-detail.png "Detailed Performance Graph")
 
 ## Overall Performance Graph
 
-![Overall Performance Graph](graph.png "Overall Performance Graph")
+![Overall Performance Graph](img/graph.png "Overall Performance Graph")
